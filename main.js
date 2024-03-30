@@ -38,7 +38,7 @@ if (pinAnswer.pinNumber === myPin) {
             },
         ]);
         if (withDrawAmountAns.inputWithDrawAmount > currentBalance) {
-            console.log("You can not draw amount more than your balance!");
+            console.log(chalk.bold.red("You can not draw amount more than your balance!"));
         }
         else {
             currentBalance -= withDrawAmountAns.inputWithDrawAmount;
