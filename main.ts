@@ -90,7 +90,7 @@ if (pinAnswer.pinNumber === myPin) {
 
       console.log(
         chalk.bold.magentaBright(
-          "Bill paid against  " +
+          "Bill paid against consumer Account Number: " +
             billPaymentAns.consumerAccountNumber +
             " & balance after bill payment is now: " +
             currentBalance
