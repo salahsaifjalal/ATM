@@ -82,16 +82,23 @@ if (pinAnswer.pinNumber === myPin) {
         type: "number",
       },
     ]);
-    currentBalance -= billPaymentAns.imputBillAmount;
-    console.log(
-      chalk.bold.magentaBright(
-        "Bill paid against  " +
-          billPaymentAns.consumerAccountNumber +
-          " & balance after bill payment is now: " +
-          currentBalance
-      )
-    );
+
+    if (billPaymentAns.imputBillAmount > currentBalance) {
+      console.log(chalk.bold.red("You can not pay bill because bill amount is more than your balance!"));
+    } else {
+      currentBalance -= billPaymentAns.imputBillAmount;
+
+      console.log(
+        chalk.bold.magentaBright(
+          "Bill paid against  " +
+            billPaymentAns.consumerAccountNumber +
+            " & balance after bill payment is now: " +
+            currentBalance
+        )
+      );
+    }
   }
+  
 } else {
   console.log(chalk.bold.bgRedBright`Sorry! You typed Incorrect PIN.`);
 }
