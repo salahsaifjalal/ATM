@@ -46,7 +46,9 @@ if (pinAnswer.pinNumber === myPin) {
     ]);
 
     if (withDrawAmountAns.inputWithDrawAmount > currentBalance) {
-      console.log(chalk.bold.red("You can not draw amount more than your balance!"));
+      console.log(
+        chalk.bold.red("You can not draw amount more than your balance!")
+      );
     } else {
       currentBalance -= withDrawAmountAns.inputWithDrawAmount;
 
@@ -84,7 +86,11 @@ if (pinAnswer.pinNumber === myPin) {
     ]);
 
     if (billPaymentAns.imputBillAmount > currentBalance) {
-      console.log(chalk.bold.red("You can not pay bill because bill amount is more than your balance!"));
+      console.log(
+        chalk.bold.red(
+          "You can not pay bill because bill amount is more than your balance!"
+        )
+      );
     } else {
       currentBalance -= billPaymentAns.imputBillAmount;
 
@@ -98,7 +104,6 @@ if (pinAnswer.pinNumber === myPin) {
       );
     }
   }
-  
 } else {
   console.log(chalk.bold.bgRedBright`Sorry! You typed Incorrect PIN.`);
 }
